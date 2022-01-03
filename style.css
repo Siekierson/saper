@@ -1,0 +1,83 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap");
+
+* {
+  font-family: "Montserrat", sans-serif;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  color: #ffffff;
+  user-select: none;
+}
+
+#field > button {
+  margin: 2px;
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  padding: 5px;
+  font-size: 1.2rem;
+  transition: 0;
+}
+
+#result {
+  font-size: 5rem;
+}
+
+#start {
+  font-size: 2rem;
+}
+
+input {
+  background-color: transparent;
+  border: 1px solid white;
+  padding: 5px;
+  outline: none;
+  border-radius: 10px;
+}
+
+.result {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgb(148, 148, 148);
+  padding: 100px;
+  border: 2px solid black;
+  border-radius: 20px;
+  opacity: 0.9;
+  animation: resultScreen 0.8s both;
+}
+@keyframes resultScreen {
+  from {
+    transform: scale(7);
+    z-index: -9;
+    opacity: 0;
+  }
+  to {
+    z-index: 9;
+    opacity: 1;
+  }
+}
+
+.result > button {
+  background-color: transparent;
+  padding: 10px;
+  font-size: 2rem;
+  border: 2px solid black;
+  border-radius: 10px;
+}
+
+body {
+  background-color: rgb(49, 49, 49);
+}
+
+button[visible~="true"] {
+  color: black;
+  background-color: white;
+}
+
+button[visible~="false"] {
+  color: transparent;
+  background-color: rgb(161, 161, 161);
+}
